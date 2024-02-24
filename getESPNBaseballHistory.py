@@ -3,9 +3,11 @@ import sys
 from time import sleep
 from os import system,mkdir
 try:
-    open("getBatterStats.csv")
+    test = open("getBatterStats.csv", "w")
+    test.close()
 except:
-    mkdir("getBatterStats.csv")
+    test2 = open("getBatterStats.csv", "x")
+    test2.close()
     pass
 s = HTMLSession()
 url = "https://www.espn.com/mlb/history/leaders"
@@ -328,6 +330,8 @@ for i in pEven:
 
 ##for i in pName:
 ##    print(i.text)
+
+
 
 
 
